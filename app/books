@@ -1,0 +1,16 @@
+export const inductedWorks = [
+  {
+    id: "claude-vs-chatgpt",
+    title: "Claude vs ChatGPT",
+    author: "Rumman Masood",
+    editor: "Haroon Younis",
+    description:
+      "Exceptional comparative thinking, sharp structure, and strong editorial polish.",
+    link: "https://softwarefinder-my.sharepoint.com/:w:/r/personal/saaqib_ahmad_softwarefinder_com/_layouts/15/doc.aspx?sourcedoc=%7B0d8788a8-bfef-483a-b2e3-b5034a35278e%7D&action=edit",
+    shelf: 0,
+    slot: 2,
+    height: 220,
+    width: 62,
+    spine: "#8b6a2b",
+  },
+];
