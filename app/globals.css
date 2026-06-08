@@ -24,3 +24,37 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes inducted-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes inducted-shimmer {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.inducted-glow-outer {
+  animation: inducted-glow 3.2s ease-in-out infinite;
+}
+
+.inducted-glow-inner {
+  animation: inducted-glow 3.2s ease-in-out infinite 0.4s;
+}
+
+.inducted-shimmer {
+  animation: inducted-shimmer 2.8s ease-in-out infinite;
+}

@@ -100,18 +100,20 @@ function DecorativeBook({ item }) {
 function InductedBook({ work, onOpen }) {
   return (
     <div className="group relative">
-      <div className="absolute inset-x-[-16px] top-2 bottom-1 rounded-2xl bg-amber-300/35 blur-2xl opacity-85" />
-      <div className="absolute inset-x-[-6px] top-7 bottom-3 rounded-xl border border-amber-200/15 opacity-80" />
+      <div className="inducted-glow-outer pointer-events-none absolute inset-x-[-28px] top-0 bottom-[-6px] rounded-3xl bg-amber-300/45 blur-3xl" />
+      <div className="inducted-glow-inner pointer-events-none absolute inset-x-[-14px] top-3 bottom-0 rounded-2xl bg-[#f5d78e]/30 blur-2xl" />
+      <div className="pointer-events-none absolute inset-x-[-8px] top-6 bottom-2 rounded-xl border border-amber-200/30 shadow-[0_0_28px_rgba(251,191,36,0.35)]" />
 
       <button
         onClick={() => onOpen(work)}
-        className="relative rounded-t-md border border-black/35 shadow-[0_12px_28px_rgba(0,0,0,0.55)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_44px_rgba(0,0,0,0.72)] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-200/30"
+        className="relative rounded-t-md border border-amber-300/35 shadow-[0_0_22px_rgba(251,191,36,0.45),0_12px_28px_rgba(0,0,0,0.55)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_0_36px_rgba(251,191,36,0.65),0_18px_44px_rgba(0,0,0,0.72)] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-200/50"
         style={{
           height: `${work.height}px`,
           width: `${work.width}px`,
           background: `linear-gradient(to bottom, ${work.spine}, #17110e)`,
         }}
       >
+        <div className="inducted-shimmer pointer-events-none absolute inset-0 rounded-t-md bg-[radial-gradient(circle_at_50%_0%,rgba(251,191,36,0.28),transparent_58%)]" />
         <div className="absolute left-0 right-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#d8bb7f]/75 to-transparent" />
         <div className="absolute left-0 right-0 bottom-[2px] h-[1px] bg-gradient-to-r from-transparent via-[#d8bb7f]/45 to-transparent" />
         <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-[#d8bb7f]/18" />
