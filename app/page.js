@@ -100,32 +100,30 @@ function DecorativeBook({ item }) {
 function InductedBook({ work, onOpen }) {
   return (
     <div className="group relative">
-      <div className="inducted-glow-outer pointer-events-none absolute inset-x-[-28px] top-0 bottom-[-6px] rounded-3xl bg-amber-300/45 blur-3xl" />
-      <div className="inducted-glow-inner pointer-events-none absolute inset-x-[-14px] top-3 bottom-0 rounded-2xl bg-[#f5d78e]/30 blur-2xl" />
-      <div className="pointer-events-none absolute inset-x-[-8px] top-6 bottom-2 rounded-xl border border-amber-200/30 shadow-[0_0_28px_rgba(251,191,36,0.35)]" />
-
       <button
         onClick={() => onOpen(work)}
-        className="relative rounded-t-md border border-amber-300/35 shadow-[0_0_22px_rgba(251,191,36,0.45),0_12px_28px_rgba(0,0,0,0.55)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_0_36px_rgba(251,191,36,0.65),0_18px_44px_rgba(0,0,0,0.72)] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-200/50"
+        className="relative overflow-hidden rounded-t-md border border-amber-200/50 shadow-[inset_0_0_28px_rgba(251,191,36,0.42),inset_0_0_12px_rgba(255,237,180,0.25),0_10px_24px_rgba(0,0,0,0.55)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[inset_0_0_36px_rgba(251,191,36,0.55),inset_0_0_16px_rgba(255,237,180,0.35),0_14px_28px_rgba(0,0,0,0.65)] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-200/50"
         style={{
           height: `${work.height}px`,
           width: `${work.width}px`,
-          background: `linear-gradient(to bottom, ${work.spine}, #17110e)`,
+          background: `linear-gradient(to bottom, color-mix(in srgb, ${work.spine} 70%, #f5d78e), ${work.spine} 40%, #1a1208 75%, #17110e)`,
         }}
       >
-        <div className="inducted-shimmer pointer-events-none absolute inset-0 rounded-t-md bg-[radial-gradient(circle_at_50%_0%,rgba(251,191,36,0.28),transparent_58%)]" />
-        <div className="absolute left-0 right-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#d8bb7f]/75 to-transparent" />
-        <div className="absolute left-0 right-0 bottom-[2px] h-[1px] bg-gradient-to-r from-transparent via-[#d8bb7f]/45 to-transparent" />
-        <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-[#d8bb7f]/18" />
-        <div className="absolute right-0 top-0 bottom-0 w-[1px] bg-[#d8bb7f]/12" />
-        <div className="absolute left-[4px] top-0 h-full w-[4px] bg-black/18" />
-        <div className="absolute right-[3px] top-0 h-full w-[2px] bg-white/6" />
-        <div className="absolute inset-y-0 left-1/2 w-[1px] -translate-x-1/2 bg-[#d8bb7f]/15" />
+        <div className="inducted-inner-glow pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(255,220,130,0.55),rgba(251,191,36,0.22)_40%,transparent_72%)]" />
+        <div className="inducted-core-pulse pointer-events-none absolute inset-y-5 left-1/2 w-[4px] -translate-x-1/2 rounded-full bg-gradient-to-b from-amber-100/90 via-amber-300/55 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-2 top-3 bottom-3 rounded-sm border border-amber-200/20 shadow-[inset_0_0_18px_rgba(251,191,36,0.35)]" />
+        <div className="absolute left-0 right-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#ffe9a8]/90 to-transparent" />
+        <div className="absolute left-0 right-0 bottom-[2px] h-[1px] bg-gradient-to-r from-transparent via-[#d8bb7f]/55 to-transparent" />
+        <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-[#ffe9a8]/35" />
+        <div className="absolute right-0 top-0 bottom-0 w-[1px] bg-[#d8bb7f]/20" />
+        <div className="absolute left-[4px] top-0 h-full w-[4px] bg-black/12" />
+        <div className="absolute right-[3px] top-0 h-full w-[2px] bg-white/10" />
+        <div className="absolute inset-y-0 left-1/2 w-[1px] -translate-x-1/2 bg-[#ffe9a8]/40" />
         <BookOrnament />
 
-        <div className="flex h-full items-center justify-center px-1">
+        <div className="relative flex h-full items-center justify-center px-1">
           <span
-            className="text-[8px] uppercase tracking-[0.22em] text-amber-100"
+            className="text-[8px] uppercase tracking-[0.22em] text-amber-50 drop-shadow-[0_0_6px_rgba(251,191,36,0.8)]"
             style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
           >
             {work.title}
