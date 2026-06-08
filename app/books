@@ -13,4 +13,18 @@ export const inductedWorks = [
     width: 62,
     spine: "#8b6a2b",
   },
+  {
+    id: "agentic-hr-guide",
+    title: "Agentic HR Guide",
+    author: "Rohab Tariq",
+    editor: "Arooj Aleem",
+    description:
+      "A clear, strategy-led guide to agentic HR—what works, what doesn't, and how to get it right.",
+    link: "https://softwarefinder.com/resources/agentic-hr-guide",
+    shelf: 0,
+    slot: 4,
+    height: 210,
+    width: 58,
+    spine: "#4a5f6b",
+  },
 ];
